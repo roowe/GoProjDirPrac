@@ -12,9 +12,19 @@ You're reading `<proj-root>/README.md`.
 - We are explicitly NOT using [GO15VENDOREXPERIMENT](http://localhost:6060/cmd/go/#hdr-Vendor_Directories) either at the moment. 
 
 # Relative import paths
-We'll NOT be putting this `<proj-root>` under `$GOPATH/src`, therefore will be using the convenient [Relative Import Paths](http://localhost:6060/cmd/go/#hdr-Relative_import_paths).
+We'll NOT be putting this `<proj-root>` under `$GOPATH/src`, therefore will be using the convenient [Relative Import Paths](http://localhost:6060/cmd/go/#hdr-Relative_import_paths) -- mind the last sentence in the linked godoc section.
+
+```
+To avoid ambiguity, Go programs cannot use relative import paths within a work space.
+```
 
 This is slightly different from the dir structure introduced in [How to write Go codes](http://localhost:6060/doc/code.html), and more similar to [the convention of NodeJs/npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally). 
+
+## Build and run
+```
+user@proj-root> go build main.go
+user@proj-root> ./main
+```
 
 # Package management
 We use [Gopm Registry](https://gopm.io/) to download packages into `$GOPATH` but NOT its binary as one way of package management in China. 
