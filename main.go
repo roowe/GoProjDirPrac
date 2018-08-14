@@ -1,7 +1,7 @@
 package main
 
 import (
-  "./arithmetic"
+  "prac/arithmetic"
   "fmt"
 )
 
